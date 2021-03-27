@@ -18,7 +18,7 @@ from sklearn.metrics import precision_recall_curve
 from joblib import dump, load
 
 ## INTERNAL
-from kaggle_challenge_mar.data import feat_drop, uniques
+from data import uniques, feat_drop
 
 ## Importing the test set from kaggle
 
@@ -38,13 +38,13 @@ class Predictor:
             X_test_p[k].apply(lambda x: x if x in v else "other")
 
         # using preprocessor from notebook
-        preprocessor = load('kaggle_challenge_mar/preprocessor.joblib')
+        preprocessor = load('../raw_data/preprocessor.joblib')
         X_test_p = preprocessor.transform(X_test_p)
 
         return X_test_p
     
     def predict(self):
-        model_forest = load('kaggle_challenge_mar/model_forest.joblib')
+        model_forest = load('../raw_data/model_forest.joblib')
         test_data = self.preproc_test_data()
         y_pred_test = pd.DataFrame(model_forest.predict(test_data), index=self.X_test.id).rename(columns={0:"target"})
         
