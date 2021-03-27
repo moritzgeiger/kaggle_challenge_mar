@@ -11,7 +11,7 @@ import os
 
 ### FUNCTIONS AND CLASSES ###
 
-from binance_strategies.pipeline import Predictor
+from kaggle_challenge_mar.pipeline import Predictor
 
 def download_link(object_to_download, download_filename, download_link_text):
     """
@@ -77,7 +77,7 @@ if X_test:
 with st.beta_expander('''Credits'''):
         st.markdown('''
                     Made by: Moritz Geiger <br>
-                    Visit my GitHub Page: <a href="https://github.com/moritzgeiger/binance_strategies" target=blank>here</a>
+                    Visit my GitHub Page: <a href="https://github.com/moritzgeiger/kaggle_challenge_mar" target=blank>here</a>
                     ''', unsafe_allow_html=True)
 
 
