@@ -47,7 +47,8 @@ with st.beta_expander('''How can I use this?'''):
         st.markdown("""
                     - Go to the Challenge on Kaggle: <a href="https://www.kaggle.com/c/tabular-playground-series-mar-2021" target=blank>Link</a>
                     - Download the test.csv file from there
-                    - upload it here and click Predict & Download
+                    - upload it here and wait until it is uploaded
+                    - click Predict & Download
                     - You will have the predictions ready for submission dowmloaded""", unsafe_allow_html=True)
 
 with st.beta_expander('''The model'''):
