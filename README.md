@@ -1,74 +1,20 @@
 # Data analysis
-- Document here the project: kaggle_challenge_mar
-- Description: Project Description
-- Data Source:
-- Type of analysis:
+- Document here the project: **Tabular Playground Series - Mar 2021**
+- Description: This project aims to predict a binary target. The challenge is released once a month by Kaggle and open for everyone. As training data there is a total of **300,000 observations** with 30 features. 11 features are continuous values (standardized) and 19 features are categorical. The distribution of the latter is quite unbalanced and therefore needs some preprocessing. The target of 0 and 1 is also **unbalanced**, leaning towards skewed to 1. To balance the data the oversampling techinque of SMOTE is used. The notebook **'mg_pipeline'** goes through the common preprocessing and encoding strategies. As a final estimator the **RandomForestClassifier** from ScikitLearn is chosen.
+- Data Source: https://www.kaggle.com/c/tabular-playground-series-mar-2021/data
+- Scorer: ```f1```
+- Type of analysis: Logistic Regression
 
-Please document the project the better you can.
 
 # Startup the project
 
-The initial setup.
+- Download the provided data from [Kaggle](https://www.kaggle.com/c/tabular-playground-series-mar-2021/data). Or use the direct download CLI command ```kaggle competitions download -c tabular-playground-series-mar-2021```
 
-Create virtualenv and install the project:
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv ~/venv ; source ~/venv/bin/activate ;\
-    pip install pip -U; pip install -r requirements.txt
-```
+- Go to the Challenge on Kaggle: <a href="https://www.kaggle.com/c/tabular-playground-series-mar-2021">Link</a>
+- upload the test.csv klick Predict & Download
+- You will have the predictions ready for submission in your download folder
 
-Unittest test:
-```bash
-make clean install test
-```
-
-Check for kaggle_challenge_mar in gitlab.com/{group}.
-If your project is not set please add it:
-
-- Create a new project on `gitlab.com/{group}/kaggle_challenge_mar`
-- Then populate it:
-
-```bash
-##   e.g. if group is "{group}" and project_name is "kaggle_challenge_mar"
-git remote add origin git@github.com:{group}/kaggle_challenge_mar.git
-git push -u origin master
-git push -u origin --tags
-```
-
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-kaggle_challenge_mar-run
-```
-
-# Install
-
-Go to `https://github.com/{group}/kaggle_challenge_mar` to see the project, manage issues,
-setup you ssh public key, ...
-
-Create a python3 virtualenv and activate it:
-
-```bash
-sudo apt-get install virtualenv python-pip python-dev
-deactivate; virtualenv -ppython3 ~/venv ; source ~/venv/bin/activate
-```
-
-Clone the project and install it:
-
-```bash
-git clone git@github.com:{group}/kaggle_challenge_mar.git
-cd kaggle_challenge_mar
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
-kaggle_challenge_mar-run
-```
+# Summary
+- A predictor with a simple model in production
+- The overall Kaggle score for this predictor is 0.77836
+- Go to <a href="kaggle-predictor-mar.herokuapp.com">kaggle-predictor-mar.herokuapp.com</a> to have your own prediction
